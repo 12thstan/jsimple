@@ -2,4 +2,4 @@
 
   
 
-[{"categories":null,"description":"","tags":null,"title":"Blog","url":"https://github.com/12thstan/Dream/post/blog/"}]
+[{"categories":null,"description":"前言  加速的方法有多种，这里只演示我常用的三种方法。\n 平常我们浏览Github的时候，常常都会遇到 服务器抽风 的问题，面对这些问题有下面 三种解决方法 。\n Steam + + Steam + +\nSteam + + 多平台Steam辅助工具箱，对于经常访问Steam社区的同学应该不陌生，Steam + +不仅可以加速 Steam社区 ，还能加速 Github 、一些主流启动器 、微软商店  和 P站 (Pixiv是一个以插图、漫画和小说、艺术为中心的社交网络服务里的虚拟社区网站) 等。 因为Steam + + 主要面向Steam，所以这里主要说明加速Github。Steam + + 还有很多强大的功能，请自行下载体验。 （第一次使用需要在软件里安装SSL证书。）\n UsbEAm Hosts Editor UsbEAm Hosts Editor\nUsbEAm Hosts Editor 强大的多平台加速工具 羽翼城 大佬yyds\n使用教程：\n 选择 Github - 开源社区  推荐选择 上图二选一 只测试并使用过这两个，其他请自行测试 检测延迟 应用选中 选择 延迟最小 （第一次使用需要在软件里安装SSL证书）   手动配置Hosts  第三种方法参考 原文 ，该说明为修改版。","tags":null,"title":"如何优雅的加速Github","url":"https://github.com/12thstan/Dream/post/blog/"}]
