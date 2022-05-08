@@ -2,36 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://12thstan.github.io/jsimple/categories/</loc>
+    <loc>https://hugo-jsimple.vercel.app/categories/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/posts/first/</loc>
+    <loc>https://hugo-jsimple.vercel.app/posts/first/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/posts/</loc>
+    <loc>https://hugo-jsimple.vercel.app/posts/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/tags/</loc>
+    <loc>https://hugo-jsimple.vercel.app/tags/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/tags/test/</loc>
+    <loc>https://hugo-jsimple.vercel.app/tags/test/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://hugo-jsimple.vercel.app/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/</loc>
+    <loc>https://hugo-jsimple.vercel.app/</loc>
     <lastmod>2022-05-08T22:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/links/</loc>
+    <loc>https://hugo-jsimple.vercel.app/links/</loc>
     <lastmod>2019-04-20T23:10:44+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/archives/</loc>
+    <loc>https://hugo-jsimple.vercel.app/archives/</loc>
     <lastmod>2019-04-20T13:29:27+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/help/</loc>
+    <loc>https://hugo-jsimple.vercel.app/help/</loc>
     <lastmod>2019-04-20T13:29:27+08:00</lastmod>
   </url><url>
-    <loc>https://12thstan.github.io/jsimple/series/</loc>
+    <loc>https://hugo-jsimple.vercel.app/series/</loc>
   </url>
 </urlset>
