@@ -8,12 +8,12 @@
     <language>zh-CN</language>
     <lastBuildDate>Sun, 08 May 2022 22:02:00 +0800</lastBuildDate><atom:link href="https://jsimple.c12th.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>first</title>
-      <link>https://jsimple.c12th.cn/posts/first/</link>
+      <title>如何优雅的加速Github</title>
+      <link>https://jsimple.c12th.cn/posts/1/</link>
       <pubDate>Sun, 08 May 2022 22:02:00 +0800</pubDate>
       
-      <guid>https://jsimple.c12th.cn/posts/first/</guid>
-      <description>碎碎念 由于hugo没有插件接口或者有我这小白还不知道。目前官方大部分的主题都没有搜索功能，而一些拥有</description>
+      <guid>https://jsimple.c12th.cn/posts/1/</guid>
+      <description>前言 加速的方法有多种，这里只演示我常用的三种方法。 平常我们浏览Github的时候，常常都会遇到 服务器</description>
     </item>
     
     <item>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="/css/SimpleStyle.css">
+    <link rel="stylesheet" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/xiaomai.css">
+    <link rel="stylesheet" href="/css/share.min.css">
+    <link rel="stylesheet" href="/css/zoom.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/iconfont/iconfont.css">
+    <link rel="icon" href="https://pic.imgdb.cn/item/624aa2ca239250f7c5145d0d.png">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>如何优雅的加速Github &middot; Reverse &#39;s blog</title>
+</head>
+<body><div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="R">R</a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        
+    </nav>
+</div><div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="https://blog.c12th.cn/"><i class="fa fa-paw"></i></a>
+</div><div id="wrapper" class="clearfix">
+           <div id="body">
+             <div id="main" class="main"><div class="page-title">
+    <ul>
+        
+            <li >
+              <a href="https://jsimple.c12th.cn/">首页</a>
+            </li>
+        
+            <li >
+              <a href="https://jsimple.c12th.cn/sitemap.xml">RSS</a>
+            </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" ><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+        <div class="ins-search-mask"></div>
+        <div class="ins-search-container">
+            <div class="ins-input-wrapper">
+                <input type="text" class="ins-search-input" placeholder="请输入关键字..."/>
+                <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+            </div>
+            <div class="ins-section-wrapper">
+                <div class="ins-section-container"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function (window) {
+            var INSIGHT_CONFIG = {
+                TRANSLATION: {
+                    POSTS: '文章',
+                    TAGS: '便签',
+                },
+                ROOT_URL: "https://jsimple.c12th.cn",
+                CONTENT_URL: '/lunr.json',
+            };
+            window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+        })(window);
+    </script>
+</li>
+</ul>
+</div><div class="main-inner">
+    <article class="post">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/12thstan/js@1.1.2/img/202203071633899.gif" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <span>Reverse</span>
+                    <span>May 8, 2022</span>
+                </p>
+                <p></p>
+            </div>
+            <h2 class="post-title">如何优雅的加速Github</h2>
+            <div class="post-meta">
+                本文总共1325个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h1 id="前言">前言</h1>
+<blockquote>
+<p>加速的方法有多种，这里只演示我常用的三种方法。</p>
+</blockquote>
+<p>平常我们浏览Github的时候，常常都会遇到 <strong>服务器抽风</strong> 的问题，面对这些问题有下面 <strong>三种解决方法</strong> 。</p>
+<hr>
+<h1 id="steam--httpssteamppnet"><a href="https://steampp.net/">Steam + +</a></h1>
+<p><img src="https://pic.imgdb.cn/item/624af1da239250f7c5c4ac72.png" alt=""></p>
+<p>Steam + +</p>
+<p>Steam + +</p>
+<blockquote>
+<p><strong>多平台Steam辅助工具箱，对于经常访问Steam社区的同学应该不陌生，Steam + +不仅可以加速 Steam社区 ，还能加速 Github 、一些主流启动器 、微软商店 和 P站</strong>(Pixiv是一个以插图、漫画和小说、艺术为中心的社交网络服务里的虚拟社区网站) <strong>等。<em><strong>因为Steam + + 主要面向Steam，所以这里主要说明加速Github。Steam + + 还有很多强大的功能，请自行下载体验。</strong></em>（第一次使用需要在软件里安装SSL证书。）</strong></p>
+</blockquote>
+<hr>
+<h1 id="usbeam-hosts-editorhttpswwwdogfight360comblog475"><a href="https://www.dogfight360.com/blog/475/">UsbEAm Hosts Editor</a></h1>
+<p><img src="https://pic.imgdb.cn/item/624af1da239250f7c5c4ac82.png" alt=""></p>
+<p>UsbEAm Hosts Editor</p>
+<p>UsbEAm Hosts Editor</p>
+<p>强大的多平台加速工具 <strong>羽翼城 大佬yyds</strong></p>
+<p><strong>使用教程：</strong></p>
+<ol>
+<li>选择 <strong>Github - 开源社区</strong> <img src="https://pic.imgdb.cn/item/624af1da239250f7c5c4ac79.png" alt=""></li>
+<li>推荐选择 <strong>上图二选一</strong> <em>只测试并使用过这两个，其他请自行测试</em></li>
+<li>点击 <strong>检测延迟</strong></li>
+<li><strong>应用选中</strong> 选择 <strong>延迟最小</strong> <strong>（第一次使用需要在软件里安装SSL证书）</strong></li>
+</ol>
+<hr>
+<h1 id="手动配置hostshttpsgithubcom521xueweihangithub520"><a href="https://github.com/521xueweihan/GitHub520">手动配置Hosts</a></h1>
+<blockquote>
+<p>第三种方法参考 <a href="https://www.bilibili.com/read/cv10607526">原文</a> ，该说明为 <strong>修改版</strong>。</p>
+</blockquote>
+<p>感谢 <strong>削微寒 大佬</strong> 提供解决方案</p>
+<p>感谢 <strong>Acwinuxos系统</strong> 原文整理</p>
+<p><strong>修改教程：</strong></p>
+<ul>
+<li>点击下载</li>
+</ul>
+<p><strong><del>点击<a href="https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts">下载Hosts</a></del></strong></p>
+<p><del><strong>作者更新了，去</strong><!-- raw HTML omitted --> 复制粘贴 <!-- raw HTML omitted --><strong>最新 -&gt; 2022-01-01T00:05:46+08:00</strong></del></p>
+<p><del><strong>作者更新了，去</strong><!-- raw HTML omitted --> 复制粘贴 <!-- raw HTML omitted --><strong>最新 -&gt; 2022-01-01T20:07:29+08:00</strong></del></p>
+<p><del><strong>作者更新了，去</strong><!-- raw HTML omitted --> 复制粘贴 <!-- raw HTML omitted --><strong>最新 -&gt; 2022-01-02T10:21:15+08:00</strong></del></p>
+<p><strong>作者更新了，去</strong><!-- raw HTML omitted --> 复制粘贴 <!-- raw HTML omitted --><strong>最新 -&gt; 2022-01-02T14:06:24+08:00</strong></p>
+<p><strong>已停止同步更新，如需最新Hosts配置，可到作者Github查看，或使用作者提供的方法。</strong></p>
+<ul>
+<li>复制粘贴（2022-01-02）</li>
+</ul>
+<pre tabindex="0"><code># GitHub520 Host Start
+140.82.112.26                 alive.github.com
+140.82.114.25                 live.github.com
+185.199.108.154               github.githubassets.com
+140.82.114.21                 central.github.com
+185.199.108.133               desktop.githubusercontent.com
+185.199.108.153               assets-cdn.github.com
+185.199.108.133               camo.githubusercontent.com
+185.199.108.133               github.map.fastly.net
+199.232.69.194                github.global.ssl.fastly.net
+140.82.113.3                  gist.github.com
+185.199.108.153               github.io
+140.82.112.4                  github.com
+192.0.66.2                    github.blog
+140.82.114.5                  api.github.com
+185.199.108.133               raw.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
+185.199.108.133               avatars5.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
+185.199.108.133               avatars1.githubusercontent.com
+185.199.108.133               avatars0.githubusercontent.com
+185.199.108.133               avatars.githubusercontent.com
+140.82.113.9                  codeload.github.com
+54.231.133.17                 github-cloud.s3.amazonaws.com
+52.217.95.25                  github-com.s3.amazonaws.com
+52.216.153.172                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.199.249                github-production-user-asset-6210df.s3.amazonaws.com
+52.217.200.1                  github-production-repository-file-5c1aeb.s3.amazonaws.com
+185.199.108.153               githubstatus.com
+64.71.144.202                 github.community
+23.100.27.125                 github.dev
+185.199.108.133               media.githubusercontent.com
+185.199.108.133               cloud.githubusercontent.com
+185.199.108.133               objects.githubusercontent.com
+
+
+# Update time: 2022-01-02T14:06:24+08:00
+# Update url: https://raw.hellogithub.com/hosts
+# Star me: https://github.com/521xueweihan/GitHub520
+# GitHub520 Host End
+
+</code></pre><ol>
+<li>
+<p>先 <del><strong>下载</strong> 或</del> <strong>复制</strong> Hosts内容 <strong>↑ ↑ ↑</strong></p>
+</li>
+<li>
+<p>找到 <strong>Hosts文件所在系统的目录</strong></p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Windows 系统： <strong>C:\Windows\System32\drivers\etc\hosts</strong></p>
+</li>
+<li>
+<p>Linux 系统： <strong>/etc/hosts</strong></p>
+</li>
+<li>
+<p>Mac（苹果电脑）系统： <strong>/etc/hosts</strong></p>
+</li>
+</ul>
+<hr>
+<ol start="3">
+<li>把 <del><strong>下载</strong> 或</del> <strong>复制</strong> 的内容 <strong>复制到文本末尾</strong></li>
+</ol>
+<ul>
+<li>
+<p>Windows <strong>使用记事本</strong> 打开</p>
+</li>
+<li>
+<p>Linux、Mac <strong>使用 Root 权限：sudo vi /etc/hosts</strong> 打开</p>
+</li>
+</ul>
+<hr>
+<ol start="4">
+<li>保存后激活，<strong>刷新 DNS</strong></li>
+</ol>
+<ul>
+<li>
+<p>Windows：<strong>在 CMD 窗口输入：ipconfig /flushdns</strong></p>
+</li>
+<li>
+<p>Linux 命令：<strong>sudo nscd restart，<em>如报错则需要安装：sudo apt install nscd 或 sudo /etc/init.d/nscd restart</em></strong></p>
+</li>
+<li>
+<p>Mac 命令：<strong>sudo killall -HUP mDNSResponder</strong></p>
+</li>
+</ul>
+<hr>
+<p>由于作者更新较为频繁，而且作者也提供了更新Hosts配置的方法。 <del>其实是我懒</del></p>
+<p><strong>作者在 <a href="https://github.com/521xueweihan/GitHub520">Github</a> 上提供了 <em>4 种</em> 更新Hosts配置的方法，这里列举 1 种。</strong>
+<strong>Chrome 插件方法：</strong></p>
+<ol>
+<li>下载 <strong><a href="https://codeload.github.com/gauseen/faster-hosts/zip/master">FasterHosts</a></strong></li>
+<li>解压后找到“ <strong>extension</strong> ”文件夹</li>
+<li>打开 <strong>Chrome</strong> ，输入： <strong>chrome://extensions/</strong>，<strong>这里要开启「开发者模式」</strong></li>
+<li>选择 <strong>「加载已解压的扩展程序」</strong> ，然后定位到刚才解压的文件夹里面的 “ <strong>extension</strong> ”文件夹， <strong>确定</strong></li>
+</ol>
+<hr>
+<h1 id="新增">新增</h1>
+<p>感谢 <strong>X. I .U 大佬</strong> 的脚本
+<strong>有一种不需要额外软件加速的方法：</strong></p>
+<ol>
+<li>安装 <a href="https://www.tampermonkey.net/">油猴插件</a> ， <strong>安装正式版「Tampermonkey Stable」</strong></li>
+<li>安装 <a href="https://greasyfork.org/zh-CN/scripts/412245-github-%E5%A2%9E%E5%BC%BA-%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD">Github 增强</a> 脚本即可</li>
+<li>一般默认即可，如需 <strong>点击切换</strong> 即可 <img src="https://pic.imgdb.cn/item/624af1da239250f7c5c4ac6a.png" alt=""></li>
+</ol>
+<hr>
+<h1 id="容易遇到的问题">容易遇到的问题</h1>
+<p><strong>使用以上方法</strong>(除新增)，<strong>在本地推送到github仓库上时容易出现的问题：</strong></p>
+<blockquote>
+<p><strong><!-- raw HTML omitted -->fatal: unable to access &lsquo;<a href="https://github.com/.......'">https://github.com/.......'</a>: OpenSSL SSL_read: Connection was reset<!-- raw HTML omitted --></strong></p>
+</blockquote>
+<p>解决方法 <strong>关闭ssl验证</strong></p>
+<pre tabindex="0"><code>  git config --global http.sslVerify &quot;false&quot;
+</code></pre><p><strong>重新推送即可</strong></p>
+<hr>
+<h1 id="补充">补充</h1>
+<blockquote>
+<p><strong>搭建博客上传到Github仓库</strong> 或 <strong>克隆Github上的主题</strong>，推荐采用 <strong>第一种</strong> 、 <strong>第二种</strong> 和 <strong>第三种</strong> 方法。</p>
+</blockquote>
+<blockquote>
+<p>第三种方法 Hosts 配置，这里已停止同步更新，如需最新配置可到作者Github上查看。</p>
+</blockquote>
+<blockquote>
+<p>使用上面的方法也会概率性出现服务器抽风，不要方，你只需要刷新，等待，重启软件&hellip;&hellip;</p>
+</blockquote>
+<hr>
+
+            
+        </div>
+        
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        
+        
+        
+        
+        
+        <div class="post-tags">标签：
+            
+                
+                    <a href='/tags/%E5%88%86%E4%BA%AB'>分享</a>
+                
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        
+    </div>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+           		<div class="fixed-btn">
+           		    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+           		</div><footer class="footer">
+    <div class="footer-inner">
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a><br/>
+            ©2022 Reverse<br/>
+            框架<a href="https://www.gohugo.cn" target="_blank"> Hugo </a> | 主题&nbsp<a href="https://github.com/honjun/hugo-theme-jsimple" target="_blank"> JSimple </a>
+        </p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/lozad.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.share.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/CodeLineHeight.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/activate-power-mode.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/xiaomai.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/zoom.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/jquery.fancybox.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/InsightSearch.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/SimpleCore.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<script>
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script></div>
+           </div>
+        </div>
+    <script>
+        $(function () {
+            SimpleCore.init({
+                buildingTime: '<%= theme.siteBuildingTime %>',
+                current: $('.post-tags').length > 0 ? 'post' : 'archive',
+                customImg: 'https:\/\/pic.imgdb.cn\/item\/624aa2db239250f7c51480f0.jpg',
+                tipImg: 'https:\/\/pic.imgdb.cn\/item\/624aa2db239250f7c51480f0.jpg',
+            });
+            const observer = lozad();
+            observer.observe();
+    
+            
+            
+            POWERMODE.colorful = true; 
+            POWERMODE.shake = false; 
+            document.body.addEventListener('input', POWERMODE);
+    
+            
+            
+            
+            
+    
+            
+            
+            
+            
+            
+            
+        });
+    </script>
+    </body>
+</html>
