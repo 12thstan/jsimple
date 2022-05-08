@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 首页</title>
-    <link>https://hugo-jsimple.vercel.app/tags/</link>
+    <link>https://jsimple.c12th.cn/tags/</link>
     <description>Recent content in Tags on 首页</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 08 May 2022 22:02:00 +0800</lastBuildDate><atom:link href="https://hugo-jsimple.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 May 2022 22:02:00 +0800</lastBuildDate><atom:link href="https://jsimple.c12th.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>test</title>
-      <link>https://hugo-jsimple.vercel.app/tags/test/</link>
+      <link>https://jsimple.c12th.cn/tags/test/</link>
       <pubDate>Sun, 08 May 2022 22:02:00 +0800</pubDate>
       
-      <guid>https://hugo-jsimple.vercel.app/tags/test/</guid>
+      <guid>https://jsimple.c12th.cn/tags/test/</guid>
       <description></description>
     </item>
     
