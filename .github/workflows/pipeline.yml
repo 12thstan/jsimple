@@ -42,4 +42,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          # cname: wolanx.com # 重点 ！！！
+          cname: jsimple.c12th.cn # 重点 ！！！
