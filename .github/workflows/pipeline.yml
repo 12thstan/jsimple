@@ -1,45 +1,33 @@
-name: Action
+name: GitHubPages
 
 on:
   push:
-    tags:
-      - '*'
     branches:
-      - myblog
-
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+      - myblog  # Set a branch to deploy
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    # permissions:
-    #   contents: read
-    #   packages: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: setup hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.92.0'
-          extended: true
-
-      - name: build
+          # hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
+          hugo-version: '0.74.2'
+          # extended: true
+          
+      - name: Build
         run: hugo --minify
 
-      - name: deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: xxx/xxx.github.io
+          publish_branch: master
           publish_dir: ./public
-          cname: jsimple.c12th.cn # 重点 ！！！
