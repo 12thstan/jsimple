@@ -5,7 +5,7 @@ on:
     tags:
       - '*'
     branches:
-      - myblog
+      - master
 
 env:
   REGISTRY: ghcr.io
