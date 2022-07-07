@@ -1,27 +1,45 @@
-name: CI #自动化的名称
+name: Action
+
 on:
-  push: # push的时候触发
-    branches: # 那些分支需要触发
+  push:
+    tags:
+      - '*'
+    branches:
       - myblog
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build:
-    runs-on: ubuntu-latest # 镜像市场
+    runs-on: ubuntu-latest
+    # permissions:
+    #   contents: read
+    #   packages: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
     steps:
-      - name: checkout # 步骤的名称
-        uses: actions/checkout@v1 #软件市场的名称
-        with: # 参数
-          submodules: true
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.2.2
+      - name: checkout
+        uses: actions/checkout@v2
         with:
-          hugo-version: '0.64.1'
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.92.0'
           extended: true
-      - name: Build
-        run: hugo -D
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2.5.1
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: 12thstan/jsimple
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: ./public
+
+      - name: build
+        run: hugo --minify
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # cname: wolanx.com # 重点 ！！！
