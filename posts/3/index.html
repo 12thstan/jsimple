@@ -1,0 +1,205 @@
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=Edge">
+<meta name=renderer content="webkit">
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name=author content>
+<link rel=stylesheet href=/css/SimpleStyle.css>
+<link rel=stylesheet href=/css/loading.css>
+<link rel=stylesheet href=/css/xiaomai.css>
+<link rel=stylesheet href=/css/share.min.css>
+<link rel=stylesheet href=/css/zoom.css>
+<link rel=stylesheet href=/css/jquery.fancybox.min.css>
+<link rel=stylesheet href=/css/iconfont/iconfont.css>
+<link rel=icon href=https://pic.imgdb.cn/item/624aa2ca239250f7c5145d0d.png>
+<meta name=keywords content>
+<meta name=description content>
+<title>把github贡献日历部署到博客上(二) &#183; Reverse</title>
+</head>
+<body><div id=loading>
+<div id=loading-center>
+<div id=loading-center-absolute>
+<div class=object id=object_five></div>
+<div class=object id=object_four></div>
+<div class=object id=object_three></div>
+<div class=object id=object_two></div>
+<div class=object id=object_one></div>
+</div>
+</div>
+</div>
+<div id=nav>
+<nav class=nav-menu>
+<a class="site-name current" href=/ title=R>R</a>
+<a href=/archives/ title=归档><i class="fa fa-archives"></i><span>归档</span></a>
+<a href=/tags/ title=标签><i class="fa fa-tags"></i><span>标签</span></a>
+</nav>
+</div><div class=nav-user>
+<a class=btn-search href=#><i class="fa fa-search"></i></a>
+<a class=btn-read-mode href=#><i class="fa fa-sun-o"></i></a>
+<a class=btn-weixin-mp href=https://blog.c12th.cn/><i class="fa fa-paw"></i></a>
+</div><div id=wrapper class=clearfix>
+<div id=body>
+<div id=main class=main><div class=page-title>
+<ul>
+<li>
+<a href=https://jsimple.c12th.cn/>首页</a>
+</li>
+<li>
+<a href=https://jsimple.c12th.cn/sitemap.xml>RSS</a>
+</li>
+<li class=page-search>
+<form id=search class=search-form>
+<label for=s class=sr-only>请输入关键字</label>
+<input class=search-field type=text name=s class=text placeholder=请输入关键字>
+<button type=submit class=search-form-submit><i class="fa fa-search"></i></button>
+</form>
+<div class=ins-search>
+<div class=ins-search-mask></div>
+<div class=ins-search-container>
+<div class=ins-input-wrapper>
+<input type=text class=ins-search-input placeholder=请输入关键字...>
+<span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+</div>
+<div class=ins-section-wrapper>
+<div class=ins-section-container></div>
+</div>
+</div>
+</div>
+<script>(function(a){var b={TRANSLATION:{POSTS:'文章',TAGS:'便签'},ROOT_URL:"https://jsimple.c12th.cn",CONTENT_URL:'/lunr.json'};a.INSIGHT_CONFIG=b})(window)</script>
+</li>
+</ul>
+</div><div class=main-inner>
+<article class=post>
+<div class=post-header>
+<div class="post-author clearfix">
+<a class="avatar fleft" href target=_blank>
+<img width=48 src=https://unpkg.com/reverse-stu-allversions@1.0.0/img/202203071633899.gif alt=avatar>
+</a>
+<p><span class=label>作者</span>
+<span></span>
+<span>May 29, 2022</span>
+</p>
+<p></p>
+</div>
+<h2 class=post-title>把github贡献日历部署到博客上(二)</h2>
+<div class=post-meta>
+本文总共395个字 | 您是第<span id=busuanzi_value_page_pv><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+</div>
+</div>
+<div class="post-content markdown-body">
+<h1 id=前言>前言</h1>
+<blockquote>
+<p>原教程已经说得很详细了，这里演示 <strong>部分跟原教程有所不同</strong></p>
+</blockquote>
+<blockquote>
+<p>原教程源自 <a href=https://blog.csdn.net/weixin_44580076/article/details/118737615>Gainii 大佬</a></p>
+</blockquote>
+<hr>
+<p><img src=https://ghchart.rshah.org/409ba5/12thstan alt></p>
+<p>效果展示</p>
+<hr>
+<h1 id=教程>教程</h1>
+<h2 id=直接部署>直接部署</h2>
+<ul>
+<li>这里用到了 <a href=https://github.com/2016rshah/githubchart-api>2016rshah 大佬</a> 的方法。</li>
+</ul>
+<pre tabindex=0><code>  &lt;img src=&quot;https://ghchart.rshah.org/github用户名&quot; alt=&quot;github用户名's Github chart&quot; /&gt;
+</code></pre><ul>
+<li><a href=https://blog.csdn.net/weixin_44580076/article/details/118737615>这个方法最绝的地方是，将你自己的贡献日历变成了图片，只需要使用一行 HTML 语句，就可以在任何地方使用贡献日历。</a></li>
+</ul>
+<hr>
+<blockquote>
+<p><strong>由于当前不能使用 HTML 语句，所以配置有所不同</strong></p>
+</blockquote>
+<ul>
+<li>如我在当前页面下部署</li>
+</ul>
+<p><img src=https://ghchart.rshah.org/12thstan alt></p>
+<pre tabindex=0><code>  ![](https://ghchart.rshah.org/12thstan)
+</code></pre><hr>
+<h2 id=自定义-颜色>自定义 颜色</h2>
+<ul>
+<li>自定义 <strong>颜色</strong> <strong>#000000</strong> <em>十六进制颜色代码</em> <strong>注意格式不带#</strong></li>
+</ul>
+<pre tabindex=0><code>  ![](https://ghchart.rshah.org/000000/github用户名)
+</code></pre><ul>
+<li>蓝色 <strong>#0000FF</strong></li>
+</ul>
+<p><img src=https://ghchart.rshah.org/0000FF/12thstan alt></p>
+<pre tabindex=0><code>  ![](https://ghchart.rshah.org/0000FF/12thstan)
+</code></pre><ul>
+<li>红色 <strong>#ff0000</strong></li>
+</ul>
+<p><img src=https://ghchart.rshah.org/ff0000/12thstan alt></p>
+<pre tabindex=0><code>  ![](https://ghchart.rshah.org/ff0000/12thstan)
+</code></pre><ul>
+<li>绿色 <strong>#00785D</strong></li>
+</ul>
+<p><img src=https://ghchart.rshah.org/00785D/12thstan alt></p>
+<pre tabindex=0><code>  ![](https://ghchart.rshah.org/00785D/12thstan)
+</code></pre><hr>
+<h2 id=部署到-next-主题>部署到 Next 主题</h2>
+<ul>
+<li>
+<p><strong>这部分是关于 Next 主题的设置，请</strong> <em>点击链接</em> <strong>移步到 Next 主题</strong></p>
+</li>
+<li>
+<p><a href=https://next.c12th.cn/archives/3.html>把github贡献日历部署到博客上(二)</a></p>
+</li>
+</ul>
+<hr>
+<h1 id=补充>补充</h1>
+<blockquote>
+<p>第一篇 <em><a href=https://blog.c12th.cn/archives/5.html>把github贡献日历部署到博客上(一)</a></em></p>
+</blockquote>
+<hr>
+</div>
+<p style=text-align:center>您的喜欢是作者写作最大的动力<img class=owoemoji src=/OwO/img/爱心.png></p>
+<div class=post-tool>
+<a class=btn-weixin-tip href=javascript:void(0);>
+<i class="fa fa-mobile" aria-hidden=true></i> 打赏支持
+</a>
+</div>
+<div class=post-tags>标签：
+<a href=/tags/%E5%88%86%E4%BA%AB>分享</a>
+</div>
+</article>
+<div class=post-nav>
+<div class="post-nav-prev post-nav-item">
+<a href=https://jsimple.c12th.cn/posts/2/>白嫖cloudflare实现网址短链接<i class="fa fa-chevron-left"></i></a>
+</div>
+<div class="post-nav-next post-nav-item">
+<a href=https://jsimple.c12th.cn/posts/4/>Python日记 -- 百度OCR翻译<i class="fa fa-chevron-right"></i></a>
+</div>
+</div>
+</div>
+<script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script>
+<div class=fixed-btn>
+<a class=btn-gotop href=javascript:> <i class="fa fa-angle-up"></i></a>
+</div><footer class=footer>
+<div class=footer-inner>
+<p id=hitokoto>:D 获取中...</p>
+<script>var xhr=new XMLHttpRequest;xhr.open('get','https://v1.hitokoto.cn'),xhr.onreadystatechange=function(){var a,b;xhr.readyState===4&&(a=JSON.parse(xhr.responseText),b=document.getElementById('hitokoto'),b.innerText=a.hitokoto+'  ——'+a.from)},xhr.send()</script>
+<p>
+本站点采用<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target=_blank>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a><br>
+©2022 Reverse<br>
+框架<a href=https://www.gohugo.cn target=_blank> Hugo </a> | 主题&nbsp<a href=https://github.com/honjun/hugo-theme-jsimple target=_blank> JSimple </a>
+</p>
+</div>
+</footer>
+<script src=/js/jquery.min.js type=text/javascript></script>
+<script src=/js/lozad.js type=text/javascript></script>
+<script src=/js/jquery.share.min.js type=text/javascript></script>
+<script src=/js/CodeLineHeight.js type=text/javascript></script>
+<script src=/js/activate-power-mode.js type=text/javascript></script>
+<script src=/js/xiaomai.js type=text/javascript></script>
+<script src=/js/zoom.min.js type=text/javascript></script>
+<script src=/js/jquery.fancybox.min.js type=text/javascript></script>
+<script src=/js/InsightSearch.js type=text/javascript></script>
+<script src=/js/SimpleCore.js type=text/javascript></script>
+<script>(function(){var a=new Array,b=$('.post-tags').children('a');b.each(function(){a.push($(this).html())}),$('.fancybox').fancybox({padding:0,loop:!1})})()</script></div>
+</div>
+</div>
+<script>$(function(){SimpleCore.init({buildingTime:'<%= theme.siteBuildingTime %>',current:$('.post-tags').length>0?'post':'archive',customImg:'https://pic.imgdb.cn/item/624aa2db239250f7c51480f0.jpg',tipImg:'https://pic.imgdb.cn/item/624aa2db239250f7c51480f0.jpg'});const a=lozad();a.observe(),POWERMODE.colorful=!0,POWERMODE.shake=!1,document.body.addEventListener('input',POWERMODE)})</script>
+</body>
+</html>
