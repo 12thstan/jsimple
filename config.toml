@@ -1,0 +1,91 @@
+baseurl = "https://jsimple.c12th.cn"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+title = "首页"
+theme = "jsimple"
+themesDir = "./themes/"
+
+# Define the number of posts per page
+paginate = 10
+
+disablePathToLower = true
+summaryLength = 50
+
+[params.iconshow]
+    category = true
+    series = false
+    tag = true
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
+[params]
+    # Tell me who you are
+    siteName = "Reverse"
+		keywords = "Reverse"
+		description = "blog"
+		shortName = "R"
+    
+    # 左侧面板配置
+    avatar = "https://unpkg.com/reverse-stu-allversions@1.0.0/img/202203071633899.gif"
+    coverTitle = " “山穷水复疑无路，柳暗花明又一村。” "
+    coverDescription = "做自己喜欢做的事"
+    
+    weixin = "https://pic.imgdb.cn/item/624aa2ca239250f7c5145d0d.png"
+    sinaWb = "https://weibo.com/ceverse"
+    qq = "https://cdn.jsdelivr.net/gh/12thstan/js@1.2.3/img/03.gif"
+    github = "https://github.com/12thstan"
+    bili = "https://space.bilibili.com/28517585"
+	favicon = "https://pic.imgdb.cn/item/624aa2ca239250f7c5145d0d.png"
+    
+    # define which types of pages should be shown. By default the type with the most regular pages
+    mainSections = ["posts"]
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    # Add custom assets with their paths relative to the static folder
+    custom_css = []
+    custom_js  = []
+    
+    # 评论配置
+    # v_appId = ""
+    # v_appKey = ""
+    
+    # 文章底部配置
+    tipImg="https://pic.imgdb.cn/item/624aa2db239250f7c51480f0.jpg"
+    # QQGroup="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"
+    # weixinG="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"
+    
+    # 熊掌号
+    baiduXZ="https://blog.c12th.cn/"
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+# 头部栏目配置
+
+[[params.topMenu]]
+    name   = "首页"
+    link   = "/"
+    target = ""
+[[params.topMenu]]
+    name   = "RSS"
+    link   = "https://jsimple.c12th.cn/sitemap.xml"
+    target = ""
+# [[params.topMenu]]
+#     name   = "生活"
+#     link   = "/categories/生活/"
+#     target = ""
+# [[params.topMenu]]
+#     name   = "友链"
+#     link   = "/links/"
+#     target = ""
+   
